@@ -113,7 +113,7 @@ VITIS_BASE_CMD := $(VITIS)
 # --- Phony targets for dependencies ---
 .PHONY: all synthesis implementation clean cleanest help vivado p-all p-setup p-config p-build p-boot implementation_gui synthesis_gui elaboration
 
-all: bitstream ## Default target: builds the bitstream
+all: implementation ## Default target: builds the bitstream
 
 bd : $(PROJECT_BD)
 
