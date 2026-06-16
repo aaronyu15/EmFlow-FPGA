@@ -1,3 +1,6 @@
+// Copyright (c) 2026 Aaron Yu
+// SPDX-License-Identifier: MIT
+
 `timescale 1 ns / 1 ps
 
 module flow_s_axilite #(

@@ -1,3 +1,6 @@
+// Copyright (c) 2026 Aaron Yu
+// SPDX-License-Identifier: MIT
+
 `timescale 1ns/1ps
 
 module timer_inf #(

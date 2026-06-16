@@ -26,6 +26,8 @@ module tb_top;
 
         force aclk = `FLOW_WRAPPER.aclk; // Use the PL clock from zynq
         force aresetn = `FLOW_WRAPPER.aresetn; // Use the PL reset from zynq
+        
+        force `FLOW_WRAPPER.m_axis_tready = 1; // Ignore the DMA ready signal for sims, avoid having to set it up
 
     end
 

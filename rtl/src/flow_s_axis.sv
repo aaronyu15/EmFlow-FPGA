@@ -1,3 +1,6 @@
+// Copyright (c) 2026 Aaron Yu
+// SPDX-License-Identifier: MIT
+
 `timescale 1ps/1ps
 // generic_axis_slave_correct.sv
 // AXI4-Stream (AXIS) Slave with proper handshake logic

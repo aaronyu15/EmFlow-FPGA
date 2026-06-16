@@ -1,3 +1,6 @@
+// Copyright (c) 2026 Aaron Yu
+// SPDX-License-Identifier: MIT
+
 package design_pkg;
 
     // ============================================================================

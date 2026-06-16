@@ -1,3 +1,6 @@
+// Copyright (c) 2026 Aaron Yu
+// SPDX-License-Identifier: MIT
+
 `timescale 1ps / 1ps 
 `default_nettype none
 import design_pkg::*;
