@@ -5,7 +5,7 @@
 
 The EmFlow-FPGA repo contains the RTL design code implementation for EmFlow, an event-based optical-flow SNN capable of real-time inference. The design has been tested on the AMD/Xilinx KV260 and connects a GenX320 event camera stream to the SNN pipeline in the PL. A block diagram of the system is shown below.
 
-![](images/sample_system.png)
+![](figures/sample_system.png)
 
 The repo contains the RTL, Vivado build scripts, an xsim/UVM verification testbench, a sample export of weights and parameters, and some Linux-side driver/display helpers that can be used to run the design on hardware. 
 
