@@ -3,9 +3,11 @@
 ### Official repository for the EmFlow FPGA Hardware Accelerator
 ### [Zenodo Entry for the HFlow320 Dataset](https://zenodo.org/records/19669509) | Paper
 
-The EmFlow-FPGA repo contains the RTL design code implementation for EmFlow, an event-based optical-flow SNN capable of real-time inference. The design has been tested on the AMD/Xilinx KV260 and connects a GenX320 event camera stream to the SNN pipeline in the PL. A block diagram of the system is shown below.
+The EmFlow-FPGA repo contains the RTL design code implementation for EmFlow, an event-based optical-flow SNN capable of real-time inference. The design has been tested on the AMD/Xilinx KV260 and connects a GenX320 event camera stream to the SNN pipeline in the PL. A block diagram of the system is shown below. The EmFlow module is used to perform the core data processing aspect, and several IPs are used to help facilitate event stream transmission.
 
-![](figures/sample_system.png)
+<p align="center">
+<img src="figures/sample_system.png" />
+</p>
 
 The repo contains the RTL, Vivado build scripts, an xsim/UVM verification testbench, a sample export of weights and parameters, and some Linux-side driver/display helpers that can be used to run the design on hardware. 
 
@@ -124,12 +126,12 @@ Simulation logs and wave databases are written under `verif/output/`.
 
 ## Running on hardware
 
-After flashing the PetaLinux image to an SD card, boot the board. If you built the PetaLinux image using the `snn-firmware` recipe, the `bit.bin`, `.dtbo`, and `.` should already be installed in the proper directory (`/firmware/lib/xilinx/snn`). If using a pre-built image, transfer the driver files over (`rsync` or some other means) to the firmware directory:
+After flashing the PetaLinux image to an SD card, boot the board. If you built the PetaLinux image using the `snn-firmware` recipe, the `bit.bin`, `.dtbo`, and `.` should already be installed in the proper directory (`/lib/firmware/xilinx/snn`). If using a pre-built image, transfer the driver files over (`scp` or some other means) to the firmware directory:
 ```
-/firmware/lib/xilinx/snn
+/lib/firmware/xilinx/snn
     |-- snn-firmware.bit.bin
-    |-- snn-firmware.
-    `-- vivado_gui/   
+    |-- snn-firmware.dtbo
+    `-- shell.json
 ```
 
 Transfer the `drivers` directory from this repo to the home directory of the board, then build the board-side driver and applications on the target Linux system:
