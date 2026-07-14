@@ -15,8 +15,8 @@ verif/output
 verif/xsim.covdb
 verif/.Xil
 
-ip/axis_tkeep_handler_2_0/*
-ip/event_stream_smart_tracker_2_0/*
+ip/axis_tkeep_handler_2_0
+ip/event_stream_smart_tracker_2_0
 ip/ps_host_if_3_0
 outputs
 
@@ -35,3 +35,4 @@ outputs
 *boot.scr
 *rootfs.tar.gz
 
+emflow-fpga.zip
